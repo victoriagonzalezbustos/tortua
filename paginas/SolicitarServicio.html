@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<header>
+    <section>
+        <nav class="menu">
+            <a href= "../index.html"><img src="../img/logo_timbrit.png" height="50px"></a>
+            <ul class="menu">
+                <a href= "SolicitarServicio.html"><li class="menu-item">Solicitar</li></a>   
+                <a href= "Solicitudes.html"><li class="menu-item">Solicitudes</li></a>  
+            </ul>
+        </nav>
+    </section>
+</header>
+<main>
+        <section class="contenedorformulario">
+            <form action = "" method= "" class="formulario">
+                <div class="campo opcion">
+                    <select id="opciones" name="opciones" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="opcion1">Jardineria</option>
+                        <option value="opcion2">Carpinteria</option>
+                        <option value="opcion3">Plomeria</option>
+                    </select>
+                </div>
+                <div class="campo descripcion">
+                    <input type="text" placeholder="descripcion del trabajo" required>
+                </div>
+                <div class="campo direccion">
+                    <input type="text" placeholder="direccion" required>
+                </div>
+            </form>
+            
+        </section>
+        <section>
+            <div class="contenedorBoton">
+                <h4 class="botonEnviar"><a href="./Solicitudes.html" >Enviar</a></h4>
+            </div>
+        </section>
+</main>
