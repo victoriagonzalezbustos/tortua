@@ -1,0 +1,103 @@
+
+
+
+
+.Titulo {
+    text-align: center;
+    background-color: #fef9ff;
+    font-family: 'Poppins',sans-serif;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.tarjetitasServicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    
+    height:100vh;
+    background-color: #fef9ff;
+    .tarjetitaServicios { 
+        border: black 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Lora',sans-serif;
+        background-color: #f5e4ab;
+        a{
+            text-decoration: none;
+            color: black
+        }
+    
+    }
+
+    .tarjeta1{
+    
+        background-image: url(../img/plomeria.png);
+        
+        
+    }
+    .tarjeta2{
+        
+        background-image: url(../img/JARDINERIA-removebg-preview\ \(1\).png);
+        
+        
+    }
+    .tarjeta3{
+        
+        background-image: url(../img/carpinteria-removebg-preview.png);
+        
+        
+    }
+    .tarjeta4{
+    
+        background-image: url(../img/electricidad-removebg-preview.png);
+        
+        
+    }
+    .tarjeta5{
+        
+        background-image: url(../img/limpieza-removebg-preview.png);
+        
+        
+    }
+    .tarjeta6{
+        
+        background-image: url(../img/belleza-removebg-preview.png);
+        
+        
+    }
+    .tarjeta7{  
+        background-image: url(../img/aires-removebg-preview.png);
+        
+        
+    }
+    .tarjeta8{
+        
+        background-image: url(../img/mecanica-removebg-preview.png);
+        
+        
+    }
+    .tarjeta9{
+        
+        background-image: url(../img/pintura-removebg-preview.png);
+        
+        }
+    
+    
+
+
+ }
+
+
+ @for $i from 1 through 9 {
+    .tarjeta#{$i} {
+        background-size: cover ;
+    }
+ }
+
+

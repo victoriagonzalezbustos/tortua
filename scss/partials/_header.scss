@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora/static/Lora-Medium.ttf');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Light.ttf');
+}
+
+
+.menu {
+    background-color: #f5e4ab;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        list-style: none;
+        display: flex;
+        margin-top: 15px ;
+        gap: 3rem;
+        font-family: "Poppins";
+
+    }
+    li {
+        ul{
+            display:none;
+            position:absolute;
+            background: #f3d369;
+            padding: 0;
+            z-index: 2;
+        }
+    }
+    .dropdown{
+        
+        &:hover {
+            .dropdown-child {
+                display: block;
+                &:hover{
+                    display: block;
+                }
+            }
+        }
+
+    }
+    a { 
+        color: rgb(255, 252, 252);
+        text-decoration: none;
+    }
+    
+}
+ 
+
+/* aca hacer el menu burger*/
+@media (max-width: 480px){
+    .menu {
+        background-color: #f5e4ab;
+        display: flex;
+        justify-content: space-between;
+        ul {
+            list-style: none;
+            display: flex;
+            margin-top: 15px ;
+            gap: 3rem;
+            font-family: "Poppins";
+    
+        }
+        li {
+            ul{
+                display:none;
+                position:absolute;
+                background: #f3d369;
+                padding: 0;
+                z-index: 2;
+            }
+        }
+        .dropdown{
+            
+            &:hover {
+                .dropdown-child {
+                    display: block;
+                    &:hover{
+                        display: block;
+                    }
+                }
+            }
+    
+        }
+        a { 
+            color: rgb(255, 252, 252);
+            text-decoration: none;
+        }
+        
+    }
+    
+ }

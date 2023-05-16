@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora/static/Lora-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+}
+.menu {
+  background-color: #f5e4ab;
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin-top: 15px;
+  gap: 3rem;
+  font-family: "Poppins";
+}
+.menu li ul {
+  display: none;
+  position: absolute;
+  background: #f3d369;
+  padding: 0;
+  z-index: 2;
+}
+.menu .dropdown:hover .dropdown-child {
+  display: block;
+}
+.menu .dropdown:hover .dropdown-child:hover {
+  display: block;
+}
+.menu a {
+  color: rgb(255, 252, 252);
+  text-decoration: none;
+}
+
+/* aca hacer el menu burger*/
+@media (max-width: 480px) {
+  .menu {
+    background-color: #f5e4ab;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin-top: 15px;
+    gap: 3rem;
+    font-family: "Poppins";
+  }
+  .menu li ul {
+    display: none;
+    position: absolute;
+    background: #f3d369;
+    padding: 0;
+    z-index: 2;
+  }
+  .menu .dropdown:hover .dropdown-child {
+    display: block;
+  }
+  .menu .dropdown:hover .dropdown-child:hover {
+    display: block;
+  }
+  .menu a {
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+  }
+}
+.inicio {
+  display: flex;
+  justify-content: space-around;
+}
+.inicio .empecemos {
+  background-color: #f5e4ab;
+  font-family: "Poppins", sans-serif;
+  font-size: xx-large;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inicio .empecemos .contenedorTituloyDescripcion {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+}
+.inicio .empecemos .contenedorTituloyDescripcion .descripcion {
+  font-size: small;
+  text-align: center;
+}
+.inicio .empecemos .contenedorTituloyDescripcion .tituloempecemos {
+  height: 30%;
+  background-color: #f5e4ab;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inicio .empecemos .tarjetitas {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f5e4ab;
+  font-size: large;
+  height: 30vh;
+  height: 50%;
+}
+.inicio .empecemos .tarjetitas a {
+  text-decoration: none;
+  color: rgb(255, 252, 252);
+}
+.inicio .empecemos .tarjetitas .tarjetita {
+  width: 90%;
+  height: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(34, 85%, 69%);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
+}
+.inicio .imagenInicio {
+  height: 100hv;
+  background-color: #f5e4ab;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.inicio .imagenInicio img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80%;
+}
+.inicio .imagenInicio .imagenCarpintero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 40%;
+  border-top-right-radius: 150% 0%;
+}
+.inicio .imagenInicio .imagenCarpintero img {
+  border-top-right-radius: 150% 40%;
+  border-top-left-radius: 150% 40%;
+}
+.inicio .imagenInicio .imagenLimpieza {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.inicio .imagenInicio .imagenLimpieza img {
+  border-bottom-right-radius: 150% 40%;
+  border-bottom-left-radius: 150% 40%;
+}
+
+/*COMO USAR*/
+.titulo {
+  background-color: #f5e4ab;
+  font-family: "Poppins";
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titulo .contenedorBS {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjetasComoUsar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+  background-color: #f5e4ab;
+}
+.tarjetasComoUsar .cardComoUsar {
+  position: relative;
+  height: 60%;
+  width: 40%;
+}
+.tarjetasComoUsar .cardComoUsar div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition: 2s;
+}
+.tarjetasComoUsar .cardComoUsar .front {
+  background-color: hsl(34, 85%, 69%);
+}
+.tarjetasComoUsar .cardComoUsar:hover .front {
+  transform: perspective(500px) rotateY(180deg);
+}
+.tarjetasComoUsar .cardComoUsar .back {
+  background: hsl(34, 85%, 69%);
+  transform: perspective(500px) rotateY(180deg);
+}
+.tarjetasComoUsar .cardComoUsar:hover .back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    background-color: #f5e4ab;
+    font-family: "Poppins";
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .cardComoUsar {
+    position: relative;
+    height: 40%;
+    width: 90%;
+  }
+  .cardComoUsar div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: 2s;
+  }
+  .cardComoUsar .front {
+    background-color: hsl(34, 85%, 69%);
+  }
+  .cardComoUsar .back {
+    background: hsl(34, 85%, 69%);
+    transform: perspective(500px) rotateY(180deg);
+  }
+  .cardComoUsar:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+  }
+  .cardComoUsar:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+  }
+  .tarjetasComoUsar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    background-color: #f5e4ab;
+  }
+  .contenedorBS {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.Titulo {
+  text-align: center;
+  background-color: #fef9ff;
+  font-family: "Poppins", sans-serif;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tarjetitasServicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  height: 100vh;
+  background-color: #fef9ff;
+}
+.tarjetitasServicios .tarjetitaServicios {
+  border: black 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lora", sans-serif;
+  background-color: #f5e4ab;
+}
+.tarjetitasServicios .tarjetitaServicios a {
+  text-decoration: none;
+  color: black;
+}
+.tarjetitasServicios .tarjeta1 {
+  background-image: url(../img/plomeria.png);
+}
+.tarjetitasServicios .tarjeta2 {
+  background-image: url(../img/JARDINERIA-removebg-preview\ \(1\).png);
+}
+.tarjetitasServicios .tarjeta3 {
+  background-image: url(../img/carpinteria-removebg-preview.png);
+}
+.tarjetitasServicios .tarjeta4 {
+  background-image: url(../img/electricidad-removebg-preview.png);
+}
+.tarjetitasServicios .tarjeta5 {
+  background-image: url(../img/limpieza-removebg-preview.png);
+}
+.tarjetitasServicios .tarjeta6 {
+  background-image: url(../img/belleza-removebg-preview.png);
+}
+.tarjetitasServicios .tarjeta7 {
+  background-image: url(../img/aires-removebg-preview.png);
+}
+.tarjetitasServicios .tarjeta8 {
+  background-image: url(../img/mecanica-removebg-preview.png);
+}
+.tarjetitasServicios .tarjeta9 {
+  background-image: url(../img/pintura-removebg-preview.png);
+}
+
+.tarjeta1 {
+  background-size: cover;
+}
+
+.tarjeta2 {
+  background-size: cover;
+}
+
+.tarjeta3 {
+  background-size: cover;
+}
+
+.tarjeta4 {
+  background-size: cover;
+}
+
+.tarjeta5 {
+  background-size: cover;
+}
+
+.tarjeta6 {
+  background-size: cover;
+}
+
+.tarjeta7 {
+  background-size: cover;
+}
+
+.tarjeta8 {
+  background-size: cover;
+}
+
+.tarjeta9 {
+  background-size: cover;
+}
+
+.SeccionRegistrate {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.SeccionRegistrate .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.SeccionRegistrate .form input {
+  width: 50%;
+}
+.SeccionRegistrate .contenedorBoton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.SeccionRegistrate .contenedorBoton .botonEnviar {
+  width: 50%;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #f5e4ab;
+  background-image: linear-gradient(90deg, hsl(34, 85%, 69%) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 1s ease-in-out;
+}
+.SeccionRegistrate .contenedorBoton .botonEnviar:hover {
+  background-position: 0;
+}
+.SeccionRegistrate .contenedorBoton .botonEnviar a {
+  color: black;
+  text-decoration: none;
+}
+
+/*SOLICITUDES*/
+.solicitudes h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.solicitud div {
+  padding: 10px;
+}
+
+.trabajos h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.contenedorformulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedorformulario .formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "opcion descripcion" "direccion direccion";
+  grid-gap: 3px;
+  height: 30vh;
+}
+.contenedorformulario .formulario .campo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lora", sans-serif;
+}
+.contenedorformulario .formulario .opcion {
+  grid-area: opcion;
+}
+.contenedorformulario .formulario .descripcion {
+  grid-area: descripcion;
+}
+.contenedorformulario .formulario .direccion {
+  grid-area: direccion;
+}
+
+.contenedorBoton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contenedorBoton .botonEnviar {
+  width: 50%;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #f5e4ab;
+  background-image: linear-gradient(90deg, hsl(34, 85%, 69%) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 1s ease-in-out;
+  color: black;
+}
+.contenedorBoton .botonEnviar:hover {
+  background-position: 0;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
