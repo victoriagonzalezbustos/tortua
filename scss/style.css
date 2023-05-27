@@ -16,8 +16,12 @@
   font-family: "Poppins";
   src: url("../fonts/Poppins/Poppins-Light.ttf");
 }
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/Noto_Sans_Chorasmian");
+}
 .menu {
-  background-color: #f5e4ab;
+  background-color: #022F40;
   display: flex;
   justify-content: space-between;
 }
@@ -25,13 +29,13 @@
   list-style: none;
   display: flex;
   margin-top: 15px;
-  gap: 3rem;
+  gap: 2rem;
   font-family: "Poppins";
 }
 .menu li ul {
   display: none;
   position: absolute;
-  background: #f3d369;
+  background: #022F40;
   padding: 0;
   z-index: 2;
 }
@@ -46,44 +50,28 @@
   text-decoration: none;
 }
 
-/* aca hacer el menu burger*/
-@media (max-width: 480px) {
-  .menu {
-    background-color: #f5e4ab;
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu ul {
-    list-style: none;
-    display: flex;
-    margin-top: 15px;
-    gap: 3rem;
-    font-family: "Poppins";
-  }
-  .menu li ul {
-    display: none;
-    position: absolute;
-    background: #f3d369;
-    padding: 0;
-    z-index: 2;
-  }
-  .menu .dropdown:hover .dropdown-child {
-    display: block;
-  }
-  .menu .dropdown:hover .dropdown-child:hover {
-    display: block;
-  }
-  .menu a {
-    color: rgb(255, 252, 252);
-    text-decoration: none;
-  }
-}
 .inicio {
   display: flex;
   justify-content: space-around;
+  background-color: #DFDFDF;
+}
+@media screen and (max-width: 576px) {
+  .inicio {
+    flex-direction: column;
+    background-image: url(../img/imagen-inicio.jpg);
+    background-size: cover;
+  }
+  .inicio::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    opacity: 0.6;
+  }
 }
 .inicio .empecemos {
-  background-color: #f5e4ab;
+  z-index: 1;
   font-family: "Poppins", sans-serif;
   font-size: xx-large;
   height: 100vh;
@@ -92,24 +80,39 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 576px) {
+  .inicio .empecemos {
+    width: 100%;
+  }
+}
 .inicio .empecemos .contenedorTituloyDescripcion {
   display: flex;
   flex-direction: column;
   height: 50%;
-  justify-content: center;
+  justify-content: space-around;
 }
 .inicio .empecemos .contenedorTituloyDescripcion .descripcion {
   font-size: small;
-  text-align: center;
+  text-align: left;
+}
+@media screen and (max-width: 576px) {
+  .inicio .empecemos .contenedorTituloyDescripcion .descripcion {
+    text-align: center;
+  }
 }
 .inicio .empecemos .contenedorTituloyDescripcion .tituloempecemos {
-  height: 30%;
-  background-color: #f5e4ab;
   width: 100%;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
+  line-height: 1;
+}
+@media screen and (max-width: 576px) {
+  .inicio .empecemos .contenedorTituloyDescripcion .tituloempecemos {
+    justify-content: center;
+    text-align: center;
+  }
 }
 .inicio .empecemos .tarjetitas {
   display: flex;
@@ -117,7 +120,6 @@
   justify-content: top;
   align-items: center;
   gap: 0.5rem;
-  background-color: #f5e4ab;
   font-size: large;
   height: 30vh;
   height: 50%;
@@ -133,22 +135,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: hsl(34, 85%, 69%);
+  background-color: #175676;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   padding: 10px;
 }
+.inicio .empecemos .tarjetitas .tarjetita:hover {
+  background-color: #022F40;
+}
 .inicio .imagenInicio {
   height: 100hv;
-  background-color: #f5e4ab;
+  background-color: #DFDFDF;
   width: 50%;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+  .inicio .imagenInicio {
+    width: 100%;
+  }
 }
 .inicio .imagenInicio img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 80%;
+}
+@media screen and (max-width: 576px) {
+  .inicio .imagenInicio img {
+    display: none;
+  }
 }
 .inicio .imagenInicio .imagenCarpintero {
   display: flex;
@@ -170,10 +185,15 @@
   border-bottom-right-radius: 150% 40%;
   border-bottom-left-radius: 150% 40%;
 }
+@media screen and (max-width: 576px) {
+  .inicio .imagenInicio .imagenLimpieza img {
+    display: none;
+  }
+}
 
 /*COMO USAR*/
 .titulo {
-  background-color: #f5e4ab;
+  background-color: #DFDFDF;
   font-family: "Poppins";
   height: 20vh;
   display: flex;
@@ -194,12 +214,29 @@
   justify-content: space-around;
   align-items: center;
   height: 80vh;
-  background-color: #f5e4ab;
+  background-color: #DFDFDF;
+  background-size: 100vh;
+  font-family: "Noto", sans-serif;
+}
+@media screen and (max-width: 576px) {
+  .tarjetasComoUsar {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+  }
 }
 .tarjetasComoUsar .cardComoUsar {
   position: relative;
   height: 60%;
   width: 40%;
+}
+@media screen and (max-width: 576px) {
+  .tarjetasComoUsar .cardComoUsar {
+    width: 80%;
+    height: 40%;
+    font-size: xx-small;
+  }
 }
 .tarjetasComoUsar .cardComoUsar div {
   position: absolute;
@@ -212,130 +249,99 @@
   transition: 2s;
 }
 .tarjetasComoUsar .cardComoUsar .front {
-  background-color: hsl(34, 85%, 69%);
+  display: flex;
+  flex-direction: column;
+  background-color: #175676;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
 }
 .tarjetasComoUsar .cardComoUsar:hover .front {
   transform: perspective(500px) rotateY(180deg);
 }
 .tarjetasComoUsar .cardComoUsar .back {
-  background: hsl(34, 85%, 69%);
+  background: #175676;
   transform: perspective(500px) rotateY(180deg);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  padding: 10px;
 }
 .tarjetasComoUsar .cardComoUsar:hover .back {
   transform: perspective(500px) rotateY(360deg);
 }
 
-@media (max-width: 480px) {
-  .titulo {
-    background-color: #f5e4ab;
-    font-family: "Poppins";
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .cardComoUsar {
-    position: relative;
-    height: 40%;
-    width: 90%;
-  }
-  .cardComoUsar div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backface-visibility: hidden;
-    transition: 2s;
-  }
-  .cardComoUsar .front {
-    background-color: hsl(34, 85%, 69%);
-  }
-  .cardComoUsar .back {
-    background: hsl(34, 85%, 69%);
-    transform: perspective(500px) rotateY(180deg);
-  }
-  .cardComoUsar:hover .front {
-    transform: perspective(500px) rotateY(180deg);
-  }
-  .cardComoUsar:hover .back {
-    transform: perspective(500px) rotateY(360deg);
-  }
-  .tarjetasComoUsar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
-    background-color: #f5e4ab;
-  }
-  .contenedorBS {
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .Titulo {
   text-align: center;
-  background-color: #fef9ff;
+  background-color: #DFDFDF;
   font-family: "Poppins", sans-serif;
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 30vh;
+}
+.Titulo h3 {
+  text-align: left;
 }
 
 .tarjetitasServicios {
+  background-image: url(../img/fondo.jpg);
+  background-repeat: repeat;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 20px;
-  height: 100vh;
-  background-color: #fef9ff;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+}
+@media screen and (max-width: 576px) {
+  .tarjetitasServicios {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
 }
 .tarjetitasServicios .tarjetitaServicios {
-  border: black 1px solid;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   font-family: "Lora", sans-serif;
-  background-color: #f5e4ab;
+  background-color: #DFDFDF;
+}
+.tarjetitasServicios .tarjetitaServicios:hover {
+  transform: scale(1.2);
 }
 .tarjetitasServicios .tarjetitaServicios a {
   text-decoration: none;
   color: black;
+  font-family: "Noto", sans-serif;
 }
-.tarjetitasServicios .tarjeta1 {
-  background-image: url(../img/plomeria.png);
+@media screen and (max-width: 576px) {
+  .tarjetitasServicios .tarjetitaServicios div {
+    width: 100%;
+    text-align: center;
+  }
 }
-.tarjetitasServicios .tarjeta2 {
-  background-image: url(../img/JARDINERIA-removebg-preview\ \(1\).png);
+.tarjetitasServicios .tarjetitaServicios img {
+  height: 40%;
 }
-.tarjetitasServicios .tarjeta3 {
-  background-image: url(../img/carpinteria-removebg-preview.png);
+@media screen and (max-width: 576px) {
+  .tarjetitasServicios .tarjetitaServicios img {
+    height: 15vh;
+    width: 30%;
+    padding: 2%;
+  }
 }
-.tarjetitasServicios .tarjeta4 {
-  background-image: url(../img/electricidad-removebg-preview.png);
-}
-.tarjetitasServicios .tarjeta5 {
-  background-image: url(../img/limpieza-removebg-preview.png);
-}
-.tarjetitasServicios .tarjeta6 {
-  background-image: url(../img/belleza-removebg-preview.png);
-}
-.tarjetitasServicios .tarjeta7 {
-  background-image: url(../img/aires-removebg-preview.png);
-}
-.tarjetitasServicios .tarjeta8 {
-  background-image: url(../img/mecanica-removebg-preview.png);
-}
-.tarjetitasServicios .tarjeta9 {
-  background-image: url(../img/pintura-removebg-preview.png);
+@media screen and (max-width: 576px) {
+  .tarjetitasServicios .tarjetitaServicios {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20vh;
+    width: 70%;
+  }
 }
 
 .tarjeta1 {
@@ -375,14 +381,16 @@
 }
 
 .SeccionRegistrate {
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
   margin: 0;
   text-align: center;
   justify-content: center;
-  gap: 5rem;
+  align-items: center;
+  gap: 2rem;
+  background-color: #DFDFDF;
 }
 .SeccionRegistrate .form {
   display: flex;
@@ -390,6 +398,22 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  background-color: #175676;
+  height: 50vh;
+  width: 70%;
+  padding: 10%;
+}
+.SeccionRegistrate .form h2 {
+  color: whitesmoke;
+}
+.SeccionRegistrate .form .controls {
+  width: 100%;
+  height: 30%;
+  background-color: #175676;
+  padding: 2%;
+  border-radius: 4px;
+  border-color: white;
+  border-width: 1px;
 }
 .SeccionRegistrate .form input {
   width: 50%;
@@ -397,16 +421,15 @@
 .SeccionRegistrate .contenedorBoton {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
+  width: 50%;
 }
 .SeccionRegistrate .contenedorBoton .botonEnviar {
   width: 50%;
   font-weight: 500;
   padding: 0.5em 1.2em;
-  background: #f5e4ab;
-  background-image: linear-gradient(90deg, hsl(34, 85%, 69%) 50%, transparent 50%);
+  background: #175676;
+  background-image: linear-gradient(90deg, #022F40 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   transition: background 1s ease-in-out;

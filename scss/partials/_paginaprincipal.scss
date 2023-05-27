@@ -2,9 +2,26 @@
 .inicio {
     display: flex;
     justify-content: space-around;
+    background-color: $colorPrincipal;
+
+   
+    @include mobile {
+        flex-direction: column;
+        background-image: url(../img/imagen-inicio.jpg);
+        background-size: cover;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            opacity: 0.6;
+        }
+    }
+
     .empecemos {
     
-        background-color: #f5e4ab;
+        z-index: 1;
         font-family: 'Poppins',sans-serif;
         font-size:xx-large;
         height:100vh;
@@ -13,26 +30,44 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @include mobile {
+            width: 100%;
+        }
+        
+
         .contenedorTituloyDescripcion{
             display: flex;
             flex-direction: column;
             height: 50%;
-            justify-content: center;
+            justify-content:space-around;
+            
+            
 
             .descripcion{
                 font-size:small;
-                text-align: center;
+                text-align: left;
+                
+                @include mobile {
+                    text-align: center;
+                }
+                
             
             }
 
             .tituloempecemos{
-                height: 30%;  
-                background-color: #f5e4ab;
+    
+        
                 width: 100%;
-                text-align: center;
+                text-align: left;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: left;
+                line-height: 1;
+                
+                @include mobile {
+                    justify-content: center;
+                    text-align: center;
+                }
             
                 
             }
@@ -48,10 +83,12 @@
             justify-content: top;
             align-items: center;
             gap: 0.5rem;
-            background-color: #f5e4ab;
+            
             font-size:large;
             height: 30vh;
             height: 50%;
+
+    
 
             a{
                 text-decoration: none;
@@ -66,10 +103,14 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background-color: hsl(34, 85%, 69%);
+                background-color: $colorSecundario;
                 -moz-border-radius: 7px;
                 -webkit-border-radius: 7px;
                 padding: 10px;
+
+                &:hover {
+                    background-color: $colorDecorativo;
+                }
             
             }
            
@@ -81,14 +122,22 @@
 
     .imagenInicio {
         height: 100hv;
-        background-color: #f5e4ab;
+        background-color: $colorPrincipal;
         width: 50%;
         display: flex;
         justify-content: space-between;
 
+        @include mobile {
+            width: 100%;
+        }
+
         img {
             object-fit: cover;
             height:80%;
+
+            @include mobile {
+                display: none;
+            }
           }
 
         .imagenCarpintero {
@@ -110,6 +159,10 @@
             img {
                 border-bottom-right-radius: 150% 40%;
                 border-bottom-left-radius: 150% 40%;
+
+                @include mobile {
+                    display: none;
+                }
             }
           }
         
@@ -118,6 +171,10 @@
 
 
 }
+
+
+
+
 
 
 

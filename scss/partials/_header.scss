@@ -18,16 +18,21 @@
     src: url('../fonts/Poppins/Poppins-Light.ttf');
 }
 
+@font-face {
+    font-family: 'Noto';
+    src: url('../fonts/Noto_Sans_Chorasmian');
+}
+
 
 .menu {
-    background-color: #f5e4ab;
+    background-color: $colorDecorativo;
     display: flex;
     justify-content: space-between;
     ul {
         list-style: none;
         display: flex;
         margin-top: 15px ;
-        gap: 3rem;
+        gap: 2rem;
         font-family: "Poppins";
 
     }
@@ -35,13 +40,12 @@
         ul{
             display:none;
             position:absolute;
-            background: #f3d369;
+            background: $colorDecorativo;
             padding: 0;
             z-index: 2;
         }
     }
     .dropdown{
-        
         &:hover {
             .dropdown-child {
                 display: block;
@@ -60,46 +64,3 @@
 }
  
 
-/* aca hacer el menu burger*/
-@media (max-width: 480px){
-    .menu {
-        background-color: #f5e4ab;
-        display: flex;
-        justify-content: space-between;
-        ul {
-            list-style: none;
-            display: flex;
-            margin-top: 15px ;
-            gap: 3rem;
-            font-family: "Poppins";
-    
-        }
-        li {
-            ul{
-                display:none;
-                position:absolute;
-                background: #f3d369;
-                padding: 0;
-                z-index: 2;
-            }
-        }
-        .dropdown{
-            
-            &:hover {
-                .dropdown-child {
-                    display: block;
-                    &:hover{
-                        display: block;
-                    }
-                }
-            }
-    
-        }
-        a { 
-            color: rgb(255, 252, 252);
-            text-decoration: none;
-        }
-        
-    }
-    
- }

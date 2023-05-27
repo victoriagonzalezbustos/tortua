@@ -15,24 +15,35 @@
     <title>Solicitudes del Profesional</title>
 </head>
 <body>
-    <header>
-        <section>
-            <nav class="menu">
-                <a href= "../index.html"><img src="../img/logo_timbrit.png" height="50px"></a>
-                <ul class="menu">
-                    <a href= "ComoUsar.html"><li class="menu-item">Como usar</li></a>   
-                    <a href= "Servicios.html"><li class="menu-item">Servicios</li></a>  
-                    <li class="dropdown">
-                        <a href ="#">Registrate</a>
-                            <ul class="dropdown-child">
-                                <a href= "RegistrateCliente.html"><li>Cliente</li></a>
-                                <a href= "RegistrateProfesional.html"><li>Profesional</li></a>
-                            </ul>
+  <header>
+    <section class="menu">
+        <a href="index.html"><img src="../img/logo_timbrit.png" height="100"></a>
+        <nav class=" navbar navbar-expand-sm">
+            <button class= "navbar-toggler" data-bs-toggle="collapse" data-bs-target="#opciones" type="button" name="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class = "collapse navbar-collapse" id="opciones">
+                <ul class="menu navbar-nav">
+                    <li class="menu-item nav-item"> 
+                        <a class= "nav-link" href= "ComoUsar.html">Como usar</a>   
                     </li>
-                </ul>
-            </nav>
-        </section>
-    </header>
+                    <li class="menu-item nav-item"> 
+                        <a class= "nav-link" href= "Servicios.html">Servicios</a>   
+                    </li> 
+                    <li class="dropdown menu-item nav-item dropdown">
+                        <a href ="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >Registrate</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                                <a href= "RegistrateCliente.html" class="dropdown-item"><li>Cliente</li></a>
+                                <a href= "RegistrateProfesional.html"class="dropdown-item"><li>Profesional</li></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>   
+            </div>  
+        </nav>
+    </section>
+</header>
     <main>
         <section class="">
             <div>

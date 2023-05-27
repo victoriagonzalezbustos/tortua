@@ -4,92 +4,84 @@
 
 .Titulo {
     text-align: center;
-    background-color: #fef9ff;
+    background-color: $colorPrincipal;
     font-family: 'Poppins',sans-serif;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 30vh;
+    h3 {
+        text-align: left;
+    }
     
 }
 
 .tarjetitasServicios{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: repeat;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px;
     
-    height:100vh;
-    background-color: #fef9ff;
-    .tarjetitaServicios { 
-        border: black 1px solid;
+    height:100%;
+    
+    width: 100%;
+    padding: 5%;
+    @include mobile{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        
+        
+    }
+    .tarjetitaServicios { 
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
         font-family: 'Lora',sans-serif;
-        background-color: #f5e4ab;
+        background-color: $colorPrincipal;
+        &:hover  {-webkit-transform:scale(1.2);transform:scale(1.2);}
+        
         a{
             text-decoration: none;
-            color: black
+            color: black;
+            font-family: 'Noto',sans-serif;
+            
+            
+        }
+        div{
+            
+            @include mobile{
+               width: 100%;
+               text-align: center;
+               
+            }
+        }
+        
+        img{
+            height: 40%;
+            
+            @include mobile{
+                height: 15vh;
+                width: 30%;
+                padding: 2%;
+                
+            }
+        }
+        @include mobile {
+            flex-direction: row;
+            justify-content: space-between;
+            height: 20vh;
+            width: 70%;
+            
         }
     
     }
-
-    .tarjeta1{
-    
-        background-image: url(../img/plomeria.png);
-        
-        
-    }
-    .tarjeta2{
-        
-        background-image: url(../img/JARDINERIA-removebg-preview\ \(1\).png);
-        
-        
-    }
-    .tarjeta3{
-        
-        background-image: url(../img/carpinteria-removebg-preview.png);
-        
-        
-    }
-    .tarjeta4{
-    
-        background-image: url(../img/electricidad-removebg-preview.png);
-        
-        
-    }
-    .tarjeta5{
-        
-        background-image: url(../img/limpieza-removebg-preview.png);
-        
-        
-    }
-    .tarjeta6{
-        
-        background-image: url(../img/belleza-removebg-preview.png);
-        
-        
-    }
-    .tarjeta7{  
-        background-image: url(../img/aires-removebg-preview.png);
-        
-        
-    }
-    .tarjeta8{
-        
-        background-image: url(../img/mecanica-removebg-preview.png);
-        
-        
-    }
-    .tarjeta9{
-        
-        background-image: url(../img/pintura-removebg-preview.png);
-        
-        }
-    
-    
-
 
  }
 
