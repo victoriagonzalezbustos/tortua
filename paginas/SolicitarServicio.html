@@ -21,26 +21,28 @@
     </section>
 </header>
 <main>
-        <section class="contenedorformulario">
-            <form action = "" method= "" class="formulario">
-                <div class="campo opcion">
-                    <select id="opciones" name="opciones" required>
-                        <option value="">-- Selecciona una opción --</option>
-                        <option value="opcion1">Jardineria</option>
-                        <option value="opcion2">Carpinteria</option>
-                        <option value="opcion3">Plomeria</option>
-                    </select>
-                </div>
-                <div class="campo descripcion">
-                    <input type="text" placeholder="descripcion del trabajo" required>
-                </div>
-                <div class="campo direccion">
-                    <input type="text" placeholder="direccion" required>
-                </div>
-            </form>
+    <section class="SeccionRegistrate">
+        
+        <form class="form">
+            <h2>Solicita el servicio que necesitas</h2>
             
-        </section>
-        <a href="./SolicitudesDelProfesional.html" ><div class="contenedorBoton">
-            <h4 class="botonEnviar">Enviar</h4>
-        </div></a>
+           
+            <label for="opciones"></label>
+            <select class= "controls" id="opciones" name="opciones" required>
+              <option value="">Que trabajo realizas?</option>
+              <option value="opcion1">Jardineria</option>
+              <option value="opcion2">Carpinteria</option>
+              <option value="opcion3">Plomeria</option>
+            </select>
+            <input class="controls"  type="text" placeholder="direccion" required>
+            <input class="controls" type="text" placeholder="descripcion del trabajo" required>
+        
+        </form>
+        <div class="contenedorBoton">
+            <h4 class="botonEnviar"><a href="./SolicitudesDelProfesional.html" >Enviar</a></h4>
+        </div>
+        
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </main>
